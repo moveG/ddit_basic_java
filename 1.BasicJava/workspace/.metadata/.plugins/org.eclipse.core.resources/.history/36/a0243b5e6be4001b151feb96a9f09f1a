@@ -1,0 +1,66 @@
+package d_array;
+
+import java.util.Arrays;
+
+public class Quiz {
+
+	public static void main(String[] args) {
+		/*
+		 * 거스름돈에 동전의 단위마다 몇 개의 동전이 필요한지 출력해주세요.(문제)
+		 * 
+		 * 거스름돈: 2860원
+		 * 500원: 5개
+		 * 100원: 3개
+		 * 50원: 1개
+		 * 10원: 1개
+		 */
+//		int money = (int)(Math.random() * 500) * 10;
+//		System.out.println("거스름돈: " + money);
+//		
+//		int[] coin = {500, 100, 50, 10};
+//		
+//		for (int i = 0; i < coin.length; i++) {
+//			int count = money / coin[i];
+//			money = money % coin[i];
+//			System.out.println(coin[i] + "원: " + count + "개");
+//		}
+		
+		int[] arr = new int[20];
+		for (int i = 0; i < arr.length; i++) {
+			arr[i] = (int)(Math.random() * 5) + 1;
+		}
+		System.out.println(Arrays.toString(arr));
+		/*
+		 * 1~5 사이의 숫자가 발생된 만큼 *을 사용해 그래프를 그려주세요.
+		 * 
+		 * 1 : *** 3
+		 * 2 : **** 4
+		 * 3 : ** 2
+		 * 4 : ***** 5
+		 * 5 : ****** 6
+		 */
+		int[] count = new int[5];
+		
+		for (int i = 0; i < arr.length; i++) {
+			for (int j = 0; i < count.length; j++) {
+				if (arr[i] == j+1) {
+					count[j]++;
+				} else {
+					break;
+				}
+			}
+		}
+		System.out.println(Arrays.toString(count));
+		
+//		}
+//		System.out.println("0" +" : " + count[0]);	
+//		System.out.println("0" +" : " + count[1]);	
+//		System.out.println("0" +" : " + count[2]);	
+//		System.out.println("0" +" : " + count[3]);	
+//		System.out.println("0" +" : " + count[4]);	
+//		
+		
+
+	}
+
+}
